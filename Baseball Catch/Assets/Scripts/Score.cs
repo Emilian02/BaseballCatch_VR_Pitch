@@ -16,5 +16,6 @@ public class Score : MonoBehaviour
         Debug.Log("Caught");
         sc.score += 1;
         sc.UpdateScoreText();
+        Destroy(gameObject, 0.5f);
     }
 }
