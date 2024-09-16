@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    ScoreManager sc;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        sc = FindAnyObjectByType<ScoreManager>();
     }
 
     public void IsCaught()
     {
         Debug.Log("Caught");
+        sc.score += 1;
+        sc.UpdateScoreText();
     }
 }

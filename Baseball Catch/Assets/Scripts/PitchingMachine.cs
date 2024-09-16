@@ -9,6 +9,11 @@ public class PitchingMachine : MonoBehaviour
     [SerializeField] Transform launchPoint;
     [SerializeField] float pitchSpeed;
 
+    private void Start()
+    {
+        InvokeRepeating("LaunchBall", 1f, Random.Range(0f, 8f));
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
